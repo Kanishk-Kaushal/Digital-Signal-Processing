@@ -12,7 +12,7 @@ ws = 2*pi*200;
 [H_b, w_b] = freqs(b_b,a_b); %Complex freq.response of analog filter
 
 [n_c1,wp_c1] = cheb1ord(wp,ws,rp,rs,'s');  % Gives mimimum order of filter
-[b_c1,a_c1] = cheby1(n_c1,wp,ws,'high','s');
+[b_c1,a_c1] = cheby1(n_c1,rp,wp,'high','s');
 [H_c1, w_c1] = freqs(b_c1,a_c1); %Complex freq.response of analog filter
 
 
